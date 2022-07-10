@@ -26,7 +26,7 @@ static int  myEventCallback(virConnectPtr conn,
     time(&now);
     currTime = localtime(&now);
 
-    snprintf(buff, MSG_MAX_SIZE, "%d/%d/%d %d:%d:%d event(%d) occurred in the domain = < %s >.\n", currTime->tm_year + 1900, currTime->tm_mon + 1, currTime->tm_mday, currTime->tm_hour, currTime->tm_min, currTime->tm_sec, event, name);
+    snprintf(buff, MSG_MAX_SIZE, "{time: %d/%d/%d %d:%d:%d, domain: %s, event: %d}\n", currTime->tm_year + 1900, currTime->tm_mon + 1, currTime->tm_mday, currTime->tm_hour, currTime->tm_min, currTime->tm_sec, name, event);
    
     mosquitto_publish(mosq, NULL, "topic1", strlen(buff) + 1, buff, 0, 0);
 
