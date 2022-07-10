@@ -49,8 +49,6 @@ mqtt协议原理和代码实现：https://blog.csdn.net/Jacobsea/article/details
 
 基于TLS协议加密的虚拟机事件发布：https://blog.csdn.net/Jacobsea/article/details/125681905
 
-在doc目录下也会提供相应的pdf文档，供大家参考~
-
 ## 7. 其他
 该项目还有待进一步的优化和升级，欢迎各位小伙伴提出建议~
 
