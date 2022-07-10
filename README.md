@@ -20,9 +20,9 @@ libvirt支持事件机制，在使用该机制注册之后，可以在发生特�
 其中，消息的发布者和订阅者都是客户端，消息代理是服务器，消息发布者可以同时是订阅者。
 MQTT传输的消息分为：主题（Topic）和负载（payload）两部分：
 
-1) Topic：订阅的主题，即channel，频道；
+Topic：订阅的主题，即channel，频道；
 
-2) payload：消息的内容，发布者向订阅者发布的具体消息。
+payload：消息的内容，发布者向订阅者发布的具体消息。
 
 ## 4. 实验环境
 libvirt version: 4.5.0
@@ -34,11 +34,11 @@ Linux version 4.19.90
 gcc version 7.3.0
 
 ## 5. 学习路线
-1) 学习libvirt提供的API接口，主要学习virEvent和virConnectDomainEvent相关的API；
+a. 学习libvirt的作用，提供的API接口，主要学习virEvent和virConnectDomainEvent相关的API；
 
-2) 学习MQTT的协议原理；
+b. 学习MQTT的协议原理；
 
-3) 学习如何建立长连接和如何使用TLS协议加密MQTT发布的消息；
+c. 学习如何建立长连接和如何使用TLS协议加密MQTT发布的消息；
 
 ## 6. 参考文献
 我在CSDN上发表了三篇技术博客，分别介绍了libvirt的event机制和代码实现、mqtt协议原理和代码实现，以及基于TLS协议加密的虚拟机事件发布。
