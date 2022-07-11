@@ -33,14 +33,27 @@ Linux version 4.19.90
 
 gcc version 7.3.0
 
-## 5. 学习路线
+## 5. 运行
+cd ./src
+
+make
+
+发布者服务器上：./libvirt_event_publish <代理服务器的主机名> <端口号>
+
+订阅者服务器上：./libvirt_event_subscribe <代理服务器的主机名> <端口号>
+
+在发布者上对虚拟机进行操作，例如：destroy open0610，start open0610。
+
+订阅者会接收到发布者发布的虚拟机的event信息，例如：Receive a message topic1: 2022/7/11 15:57:54 event(5) occurred in the domain = < open0610 >。
+
+## 6. 学习路线
 a. 学习libvirt的作用，提供的API接口，主要学习virEvent和virConnectDomainEvent相关的API；
 
 b. 学习MQTT的协议原理；
 
 c. 学习如何建立长连接和如何使用TLS协议加密MQTT发布的消息；
 
-## 6. 参考文献
+## 7. 参考文献
 我在CSDN上发表了三篇技术博客，分别介绍了libvirt的event机制和代码实现、mqtt协议原理和代码实现，以及基于TLS协议加密的虚拟机事件发布。
 
 libvirt的event机制和代码实现：https://blog.csdn.net/Jacobsea/article/details/125616913
@@ -49,6 +62,6 @@ mqtt协议原理和代码实现：https://blog.csdn.net/Jacobsea/article/details
 
 基于TLS协议加密的虚拟机事件发布：https://blog.csdn.net/Jacobsea/article/details/125681905
 
-## 7. 其他
+## 8. 其他
 该项目还有待进一步的优化和升级，欢迎各位小伙伴提出建议~
 
