@@ -41,7 +41,7 @@ void my_message_callback(struct mosquitto *mosq, void *obj, const struct mosquit
 int main(int argc, char *argv[]) {
 
     if(argc != 3) {
-        fprintf(stderr, "please input:./keepPub hostname port.\n");
+        fprintf(stderr, "Please input:%s <hostname> <port>.\n", argc);
         return -1;
     }
 
